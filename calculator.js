@@ -1,15 +1,15 @@
-const add = (firstNum, secondNum) => {
- return firstNum + secondNum;
-}
 
-const substract = (firstNum, secondNum) => {
-    return firstNum - secondNum;
-}
+const add = (firstNum, secondNum)=> firstNum + secondNum; 
 
-const multiply = (firstNum, secondNum) => {
-    return firstNum * secondNum;
-}
 
-const divide = (firstNum, secondNum) => {
-    return firstNum / secondNum;
-}
+const substract = (firstNum, secondNum)=>  firstNum - secondNum; 
+
+
+const multiply = (firstNum, secondNum)=> firstNum * secondNum;
+
+
+const divide = (firstNum, secondNum)=> firstNum / secondNum;
+
+
+
+

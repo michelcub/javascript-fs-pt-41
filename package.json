@@ -1,0 +1,15 @@
+{
+  "name": "javascript-fs-pt-41",
+  "version": "1.0.0",
+  "description": "Ejercicios js",
+  "main": "arrays.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
