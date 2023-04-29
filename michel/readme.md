@@ -1,0 +1,5 @@
+inicializar dependencias
+
+********
+npm install
+********
