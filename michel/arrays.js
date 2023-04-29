@@ -1,0 +1,4 @@
+//forEach
+//filter
+//map
+//find
