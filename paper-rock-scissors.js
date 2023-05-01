@@ -4,24 +4,23 @@ let userNumber = 0;
 let computerNumber = 0;
 
 const returnResult = (userNumber, computerNumber) => {
-    if (userNumber === computerNumber){
-        console.log ('Es un empate!!')
-     } else if(userNumber=== 1 && computerNumber=== 2){
-         console.log ('Perdiste!!')
-     } else if(userNumber=== 1 && computerNumber=== 3){
-        console.log ('Ganastes!!')
-     }else if(userNumber=== 2 && computerNumber=== 3){
-         console.log  ('Perdiste!!')
-     }else if(userNumber=== 2 && computerNumber=== 1){
-         console.log ('Ganastes!!')
-     }else if(userNumber=== 3 && computerNumber=== 1){
-         console.log ('Perdiste!!')
-     }else if(computerNumber=== 3 && userNumber=== 2){
-         console.log ('Ganastes!!')
-     
-    
-}
+    if (userNumber === computerNumber) {
+        console.log('Es un empate!!')
+    } else if (userNumber === 1 && computerNumber === 2) {
+        console.log('Perdiste!!')
+    } else if (userNumber === 1 && computerNumber === 3) {
+        console.log('Ganastes!!')
+    } else if (userNumber === 2 && computerNumber === 3) {
+        console.log('Perdiste!!')
+    } else if (userNumber === 2 && computerNumber === 1) {
+        console.log('Ganastes!!')
+    } else if (userNumber === 3 && computerNumber === 1) {
+        console.log('Perdiste!!')
+    } else if (computerNumber === 3 && userNumber === 2) {
+        console.log('Ganastes!!')
 
+    }
+}
 
 const selectionToString = (numero) => {
     switch (numero) {
@@ -36,10 +35,7 @@ const selectionToString = (numero) => {
     }
 
 }
-}
 
-
-// Seleccionar piedra papel tijera
 const promptForUserSelection = () => {
 
     const userSelection = prompt(`
@@ -60,15 +56,13 @@ while (userNumber === 0 || userNumber > 3) {
 
 
 
-// Generar un número para la máquina
 const generateComputerNumber = () => Math.floor((Math.random() * 3) + 1);
-
 computerNumber = generateComputerNumber();
 
-// Comparamos selección
+
+
 console.log(`Has elegido ${selectionToString(userNumber)}`)
 console.log(`La máquina ha elegido ${selectionToString(computerNumber)}`)
 
 
-// Devolvemos resultado
 returnResult(userNumber, computerNumber);
