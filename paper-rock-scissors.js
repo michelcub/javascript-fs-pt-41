@@ -4,8 +4,24 @@ let userNumber = 0;
 let computerNumber = 0;
 
 const returnResult = (userNumber, computerNumber) => {
+    if (userNumber === computerNumber){
+        console.log ('Es un empate!!')
+     } else if(userNumber=== 1 && computerNumber=== 2){
+         console.log ('Perdiste!!')
+     } else if(userNumber=== 1 && computerNumber=== 3){
+        console.log ('Ganastes!!')
+     }else if(userNumber=== 2 && computerNumber=== 3){
+         console.log  ('Perdiste!!')
+     }else if(userNumber=== 2 && computerNumber=== 1){
+         console.log ('Ganastes!!')
+     }else if(userNumber=== 3 && computerNumber=== 1){
+         console.log ('Perdiste!!')
+     }else if(computerNumber=== 3 && userNumber=== 2){
+         console.log ('Ganastes!!')
+     
     
 }
+
 
 const selectionToString = (numero) => {
     switch (numero) {
@@ -19,6 +35,7 @@ const selectionToString = (numero) => {
             console.log("Selección incorrecta")
     }
 
+}
 }
 
 
