@@ -3,23 +3,16 @@ const prompt = require('prompt-sync')({ sigint: true });
 let userNumber = 0;
 let computerNumber = 0;
 
-const returnResult = (userNumber, computerNumber) => {
-    if (userNumber === computerNumber) {
-        console.log('Es un empate!!')
-    } else if (userNumber === 1 && computerNumber === 2) {
-        console.log('Perdiste!!')
-    } else if (userNumber === 1 && computerNumber === 3) {
-        console.log('Ganastes!!')
-    } else if (userNumber === 2 && computerNumber === 3) {
-        console.log('Perdiste!!')
-    } else if (userNumber === 2 && computerNumber === 1) {
-        console.log('Ganastes!!')
-    } else if (userNumber === 3 && computerNumber === 1) {
-        console.log('Perdiste!!')
-    } else if (computerNumber === 3 && userNumber === 2) {
-        console.log('Ganastes!!')
+const promptForUserSelection = () => {
+    const userSelection = prompt(`
+        Utiliza el número para seleccionar:
+        1. Piedra
+        2. Papel
+        3. Tijera
+    
+    `);
 
-    }
+    return Number(userSelection);
 }
 
 const selectionToString = (numero) => {
@@ -36,17 +29,16 @@ const selectionToString = (numero) => {
 
 }
 
-const promptForUserSelection = () => {
+const returnResult = (userNumber, computerNumber) => {
+    if (userNumber === computerNumber) {
+        return '¡Es un empate!';
+        
+    } else if (userNumber === 1 && computerNumber === 3 || userNumber === 2 && computerNumber === 1 || userNumber === 3 && computerNumber === 2) {
+        return '¡Has ganado!';
 
-    const userSelection = prompt(`
-        Utiliza el número para seleccionar:
-        1. Piedra
-        2. Papel
-        3. Tijera
-    
-    `);
-
-    return Number(userSelection);
+    } else {
+        return '¡Has perdido!';
+    }
 
 }
 
@@ -61,8 +53,8 @@ computerNumber = generateComputerNumber();
 
 
 
-console.log(`Has elegido ${selectionToString(userNumber)}`)
-console.log(`La máquina ha elegido ${selectionToString(computerNumber)}`)
+console.log(`Has elegido ${selectionToString(userNumber)}`);
+console.log(`La máquina ha elegido ${selectionToString(computerNumber)}`);
 
 
-returnResult(userNumber, computerNumber);
+console.log(returnResult(userNumber, computerNumber));
