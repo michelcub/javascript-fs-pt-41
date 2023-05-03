@@ -1,26 +1,26 @@
-const prompt = require ("prompt-sync")({sigint: true});
+const prompt = 'requiere'('prompt-sync')({ sigint: true});
 
-const welcomeMessage = prompt("Hola, elige una aplicacion:
-                                1. Contar letras
-                                2. Generar contraseña
-                                3. Calculadora
-                                4. Encontrar palabras
-                                5. Generar numero aleatorio
-                                6. Piedra, papel, tijera
-                                7.Blackjack");
-    
- if
+const welcomeMessage = prompt('Hola, elige una aplicación:
+1.contar letras
+2.Generar Password
+3.Generar calculadora
+4.Encontrar palabras
+5.generar numeros');
 
-const countLetters = "countLetters";
+
+
+
+const contLetters = "contLetters";
 
 const generatePass = "generatePass";
 
 const calculator = "calculator";
+//
 
-const findWords = "findWords";
 
-const generateRandomNumbers = "generateRandomNumbers";
+// BUCLES
 
-const rockPaperScissors = "rockPaperScissors";
+let counter = 0;
 
-const blackjack = "blackjack";
+
+
