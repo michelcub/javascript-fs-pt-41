@@ -1,5 +1,6 @@
 //VARIABLES GLOBALES
 const prompt = require('prompt-sync')({ sigint: true });
+
 let deck = {
     diamonds: ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"],
     hearts: ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"],
@@ -132,8 +133,7 @@ const decision = () => {
         if (sumaPlayer < 21) {
             let question = prompt('OTRA CARTA(S/N):');
             question === "S" ? otherCard = true : otherCard = false;
-
-
+           // otherCard= question==="S"; otra forma de hacer comparacion
             if (otherCard === true) {
                 getCard();
                 sumaPlayer = sumHand(handCards);
@@ -143,7 +143,7 @@ const decision = () => {
             otherCard = false;
         }
 
-    } while (otherCard === true && sumaPlayer < 21);
+    } while (otherCard && sumaPlayer < 21);
     return sumHand(handCards);
 }
 
