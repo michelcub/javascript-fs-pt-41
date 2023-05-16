@@ -1,5 +1,4 @@
 1. Instalar dependencias
-
-$ npm install
+$ npm install -g serve
 
 
