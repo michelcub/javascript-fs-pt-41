@@ -4,9 +4,4 @@ function title (text) {
     return myTitle;
 }
 
-// const newTitle = title("This is my new title");
-
-
 export default title;
-
-
