@@ -3,3 +3,11 @@ background-color: #0051ff;
 width: 800px;
 height: 800px;
 }
+
+.card {
+    background-color: #ffffff;
+    width: 150px;
+    height: 250px;
+    margin: 30px;
+    align-items: center;
+    }
