@@ -1,0 +1,22 @@
+.div-board {
+background-color: #0051ff;
+width: 800px;
+height: 800px;
+display: flex;
+flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    width: 100px;
+    height: 150px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    }
+
+.hidden {
+    color: transparent;
+}
