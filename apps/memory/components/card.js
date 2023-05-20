@@ -1,19 +1,20 @@
+const card = (emoji) => {
+  const newCard = document.createElement("div");
+  newCard.className = "card";
+  newCard.textContent = emoji;
 
-const card = emoji =>
-{
-    const newCard= document.createElement("div");
-    newCard.className= "card hidden" ;
-    newCard.textContent = emoji;
-    function handleShowCard  ()  {
-        newCard.className= "card" ;
-        
+  const flipCard = new CustomEvent("flip", {
+    bubbles: true,
+    detail: { emoji },
+  });
 
-    }
+  function handleShowCard() {
+    newCard.classList.add("active");
+    newCard.dispatchEvent(flipCard);
+  }
 
-    newCard.addEventListener("click", handleShowCard);
+  newCard.addEventListener("click", handleShowCard);
 
-
-    return newCard;
-}
+  return newCard;
+};
 export default card;
-

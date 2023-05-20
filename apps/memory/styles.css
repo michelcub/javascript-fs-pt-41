@@ -15,8 +15,9 @@ flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     font-size: 3rem;
-    }
-
-.hidden {
     color: transparent;
+}
+
+.active {
+    color: inherit;
 }
