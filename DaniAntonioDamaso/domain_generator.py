@@ -26,7 +26,7 @@ def hack_domain(domain):
     extension_length = len(split_domain[1])
 
     if split_domain[0].endswith(split_domain[1]):
-        split_domain[0] = split_domain[0][0:-extension_length]
+        split_domain[0] = split_domain[0][0:-extension_length] ### EL SLICE ES ASÍ
         return split_domain[0] + "." + split_domain[1]
 
     return split_domain[0] + "." + split_domain[1]
